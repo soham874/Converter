@@ -1,29 +1,65 @@
-.headingformat1 {
+.click_button_1,
+.click_button_2,
+.click_button_3 {
     position: absolute;
-    top: 16px;
-    bottom: 16px;
-    left: 212px;
-    width: 126px;
-    height: 29px;
+    top: 224px;
+    width: 173px;
+    height: 137px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.thermo_cold,
+.scale_cold,
+.beaker_cold {
+    position: absolute;
+    top: 257px;
+    width: 30px;
+    height: 57px;
+    opacity: 1;
+}
+
+.length,
+.volume,
+.temperature {
+    position: absolute;
+    top: 327px;
+    width: 99px;
+    height: 19px;
     text-align: left;
-    font: normal normal 600 21px/31px Poppins;
+    font: normal normal normal 15px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: capitalize;
+    opacity: 0.21;
+}
+
+.headingformat1,
+.headingformat2 {
+    position: absolute;
+    text-align: left;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
 }
 
+.headingformat1 {
+    top: 16px;
+    bottom: 16px;
+    left: 212px;
+    width: 126px;
+    height: 29px;
+    font: normal normal 600 21px/31px Poppins;
+}
+
 .headingformat2 {
-    position: absolute;
     TOP: 22PX;
     left: 1146px;
     right: 179px;
     width: 41px;
     height: 17px;
-    text-align: left;
     font: normal normal normal 12px/18px Poppins;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
 }
 
 .welcome {
@@ -100,65 +136,42 @@
     opacity: 0.62;
 }
 
+.temperature {
+    left: 625px;
+}
+
+.length {
+    left: 444px;
+}
+
+.volume {
+    left: 848px;
+}
+
 .click_button_1 {
-    position: absolute;
-    top: 224px;
     left: 385px;
-    width: 173px;
-    height: 137px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 7px;
-    opacity: 1;
 }
 
 .click_button_2 {
-    position: absolute;
-    top: 224px;
     left: 588px;
-    width: 173px;
-    height: 137px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 7px;
-    opacity: 1;
 }
 
 .click_button_3 {
-    position: absolute;
-    top: 224px;
     left: 791px;
-    width: 173px;
-    height: 137px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 7px;
-    opacity: 1;
 }
 
 .thermo_cold {
-    position: absolute;
-    top: 257px;
     left: 660px;
-    width: 30px;
-    height: 57px;
     background: transparent url('./assets/hot\ \(1\).svg') 0% 0% no-repeat padding-box;
-    opacity: 1;
 }
 
 .beaker_cold {
-    position: absolute;
-    top: 257px;
     left: 854px;
     width: 50px;
-    height: 57px;
     background: transparent url('./assets/beaker\ \(1\).svg') 0% 0% no-repeat padding-box;
-    opacity: 1;
 }
 
 .scale_cold {
-    position: absolute;
-    top: 257px;
     left: 466px;
-    width: 30px;
-    height: 57px;
     background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
-    opacity: 1;
 }
