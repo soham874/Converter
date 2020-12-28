@@ -8,6 +8,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 7px;
     opacity: 1;
+    transition: all 0.5s;
 }
 
 .thermo_cold,

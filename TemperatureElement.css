@@ -15,3 +15,20 @@
     left: 660px;
     background: transparent url('./assets/hot.svg') 0% 0% no-repeat padding-box;
 }
+
+
+/*~~~~~~~~~~~~~~~~ON HOVER~~~~~~~~~~~~~~~*/
+
+.click_button_1:hover {
+    left: 385px;
+    background: #EDFDF9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #0EC098;
+}
+
+.click_button_3:hover {
+    left: 791px;
+    background: #E8DDFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #7224FF;
+}
