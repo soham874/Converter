@@ -132,3 +132,33 @@
     border-radius: 7px;
     opacity: 1;
 }
+
+.thermo_cold {
+    position: absolute;
+    top: 257px;
+    left: 660px;
+    width: 30px;
+    height: 57px;
+    background: transparent url('./assets/hot\ \(1\).svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.beaker_cold {
+    position: absolute;
+    top: 257px;
+    left: 854px;
+    width: 50px;
+    height: 57px;
+    background: transparent url('./assets/beaker\ \(1\).svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.scale_cold {
+    position: absolute;
+    top: 257px;
+    left: 466px;
+    width: 30px;
+    height: 57px;
+    background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
