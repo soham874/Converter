@@ -35,7 +35,6 @@
     color: #000000;
     text-transform: capitalize;
     opacity: 0.21;
-    transition: all 0.6s;
 }
 
 .headingformat1,
@@ -177,4 +176,24 @@
 .scale_cold {
     left: 466px;
     background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
+}
+
+.from_dropbox,
+.to_dropbox {
+    position: absolute;
+    top: 471px;
+    width: 280px;
+    height: 45px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E7DCFE;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.from_dropbox {
+    left: 385px;
+}
+
+.to_dropbox {
+    left: 690px;
 }

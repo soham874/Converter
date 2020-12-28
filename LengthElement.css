@@ -9,6 +9,7 @@
     background: #EDFDF9 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #0EC098;
+    transition: all 0.6s;
 }
 
 .scale_cold {
@@ -30,6 +31,7 @@
     color: #FD5160;
     opacity: 1;
     font-weight: bold;
+    transition: all 0.6s;
 }
 
 .click_button_2:hover~.thermo_cold {
@@ -48,6 +50,7 @@
     color: #7224FF;
     opacity: 1;
     font-weight: bold;
+    transition: all 0.6s;
 }
 
 .click_button_3:hover~.beaker_cold {
