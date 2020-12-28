@@ -23,11 +23,35 @@
     background: #FFEEF0 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #FD5160;
-    transition: all 0.1s;
+}
+
+.click_button_2:hover~.temperature {
+    left: 625px;
+    color: #FD5160;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.click_button_2:hover~.thermo_cold {
+    left: 660px;
+    background: transparent url('./assets/hot.svg') 0% 0% no-repeat padding-box;
 }
 
 .click_button_3:hover {
     background: #E8DDFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #7224FF;
+}
+
+.click_button_3:hover~.volume {
+    left: 848px;
+    color: #7224FF;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.click_button_3:hover~.beaker_cold {
+    left: 854px;
+    width: 50px;
+    background: transparent url('./assets/beaker.svg') 0% 0% no-repeat padding-box;
 }
