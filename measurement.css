@@ -146,39 +146,39 @@
 
 /*____________volume_______________*/
 
-.volume_rectangle:hover {
+.volume_rectangle_active {
     background: #E8DDFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #7224FF;
 }
 
-.volume_rectangle:hover .volume {
+.volume_active {
     color: #7224FF;
     opacity: 1;
     font-weight: bold;
     transition: all 0.6s;
 }
 
-.volume_rectangle:hover .volume_image {
+.volume_image_active {
     background: transparent url('./assets/beaker.svg') 0% 0% no-repeat padding-box;
 }
 
 
 /*____________length_______________*/
 
-.length_rectangle:hover {
+.length_rectangle_active {
     background: #EDFDF9 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #0EC098;
     transition: all 0.6s;
 }
 
-.length_rectangle:hover .length {
+.length_active {
     color: #0EC098;
     opacity: 1;
     font-weight: bold;
 }
 
-.length_rectangle:hover .length_image {
+.length_image_active {
     background: transparent url('./assets/scale.svg') 0% 0% no-repeat padding-box;
 }
