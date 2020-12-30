@@ -144,8 +144,7 @@
 }
 
 
-/*
-/*____________volume_______________
+/*____________volume_______________*/
 
 .volume_rectangle:hover {
     background: #E8DDFF 0% 0% no-repeat padding-box;
@@ -165,7 +164,7 @@
 }
 
 
-/*____________length_______________
+/*____________length_______________*/
 
 .length_rectangle:hover {
     background: #EDFDF9 0% 0% no-repeat padding-box;
