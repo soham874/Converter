@@ -88,8 +88,8 @@
     width: 30px;
     height: 57px;
     opacity: 1;
-    background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
     transition: all 0.6s;
+    background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
 }
 
 .temperature_image {
@@ -126,25 +126,26 @@
 
 /*____________temperature_______________*/
 
-.temperature_rectangle:hover {
+.temperature_rectangle_active {
     background: #FFEEF0 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #FD5160;
 }
 
-.temperature_rectangle:hover .temperature {
+.temperature_active {
     color: #FD5160;
     opacity: 1;
     font-weight: bold;
     transition: all 0.6s;
 }
 
-.temperature_rectangle:hover .temperature_image {
+.temperature_image_active {
     background: transparent url('./assets/hot.svg') 0% 0% no-repeat padding-box;
 }
 
 
-/*____________volume_______________*/
+/*
+/*____________volume_______________
 
 .volume_rectangle:hover {
     background: #E8DDFF 0% 0% no-repeat padding-box;
@@ -164,7 +165,7 @@
 }
 
 
-/*____________length_______________*/
+/*____________length_______________
 
 .length_rectangle:hover {
     background: #EDFDF9 0% 0% no-repeat padding-box;
