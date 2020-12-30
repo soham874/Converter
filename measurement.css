@@ -126,86 +126,59 @@
 
 /*____________temperature_______________*/
 
-.temperature_rectangle:hover,
-.temperature_rectangle:active,
-.temperature_rectangle:focus,
-.temperature_rectangle:active:focus {
+.temperature_rectangle:hover {
     background: #FFEEF0 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #FD5160;
 }
 
-.temperature_rectangle:hover .temperature,
-.temperature_rectangle:active .temperature,
-.temperature_rectangle:focus .temperature,
-.temperature_rectangle:active:focus .temperature {
+.temperature_rectangle:hover .temperature {
     color: #FD5160;
     opacity: 1;
     font-weight: bold;
     transition: all 0.6s;
 }
 
-.temperature_rectangle:hover .temperature_image,
-.temperature_rectangle:active .temperature_image,
-.temperature_rectangle:focus .temperature_image,
-.temperature_rectangle:active:focus .temperature_image {
+.temperature_rectangle:hover .temperature_image {
     background: transparent url('./assets/hot.svg') 0% 0% no-repeat padding-box;
 }
 
 
 /*____________volume_______________*/
 
-.volume_rectangle:hover,
-.volume_rectangle:active,
-.volume_rectangle:focus,
-.volume_rectangle:active:focus {
+.volume_rectangle:hover {
     background: #E8DDFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #7224FF;
 }
 
-.volume_rectangle:hover .volume,
-.volume_rectangle:active .volume,
-.volume_rectangle:focus .volume,
-.volume_rectangle:active:focus .volume {
+.volume_rectangle:hover .volume {
     color: #7224FF;
     opacity: 1;
     font-weight: bold;
     transition: all 0.6s;
 }
 
-.volume_rectangle:hover .volume_image,
-.volume_rectangle:active .volume_image,
-.volume_rectangle:focus .volume_image,
-.volume_rectangle:active:focus .volume_image {
+.volume_rectangle:hover .volume_image {
     background: transparent url('./assets/beaker.svg') 0% 0% no-repeat padding-box;
 }
 
 
 /*____________length_______________*/
 
-.length_rectangle:hover,
-.length_rectangle:active,
-.length_rectangle:focus,
-.length_rectangle:active:focus {
+.length_rectangle:hover {
     background: #EDFDF9 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #0EC098;
     transition: all 0.6s;
 }
 
-.length_rectangle:hover .length,
-.length_rectangle:active .length,
-.length_rectangle:focus .length,
-.length_rectangle:active:focus .length {
+.length_rectangle:hover .length {
     color: #0EC098;
     opacity: 1;
     font-weight: bold;
 }
 
-.length_rectangle:hover .length_image,
-.length_rectangle:active .length_image,
-.length_rectangle:focus .length_image,
-.length_rectangle:active:focus .length_image {
+.length_rectangle:hover .length_image {
     background: transparent url('./assets/scale.svg') 0% 0% no-repeat padding-box;
 }
