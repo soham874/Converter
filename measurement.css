@@ -52,19 +52,20 @@
     padding-top: 30px;
 }
 
-.choose_type {
-    text-align: left;
-    font: normal normal normal 15px/19px Montserrat;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
 .options {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.choose_type {
+    text-align: left;
+    font: normal normal normal 15px/19px Montserrat;
+    letter-spacing: 0px;
+    padding-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
 }
 
 .length_rectangle,
@@ -181,4 +182,52 @@
 
 .length_image_active {
     background: transparent url('./assets/scale.svg') 0% 0% no-repeat padding-box;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Input output boxes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.info {
+    display: flex;
+    text-align: left;
+    font: normal normal normal 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    align-items: center;
+    text-transform: uppercase;
+    opacity: 0.62;
+}
+
+.from_box,
+.to_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dialogue_boxes {
+    padding-left: 30%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
+input[type=number] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 40px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
