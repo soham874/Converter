@@ -2,9 +2,6 @@ let temp_click = 0
 let length_click = 0
 let volume_click = 0
 
-//length,volume, temperature | background,text
-let colour_tags = ["#EDFDF9", "#0EC098", "#E8DDFF", "#7224FF", "#FFEEF0", "#FD5160"]
-
 let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micrometer", "Mile", "Foot", "Inch"]
 let length_conv = [1, 1000, 100000, 1000000, 100000000, 0.621371, 3280.838879986877, 39370.1]
 
@@ -28,7 +25,7 @@ $(document).ready(function() {
                 volume_click = 0
                 removestate("length")
                 length_click = 0
-                myFunction(temp_units, colour_tags[4], colour_tags[5])
+                myFunction(temp_units)
             }
 
         }
@@ -46,7 +43,7 @@ $(document).ready(function() {
                 volume_click = 0
                 removestate("temperature")
                 temp_click = 0
-                myFunction(length_units, colour_tags[0], colour_tags[1])
+                myFunction(length_units)
             }
 
         }
@@ -64,7 +61,7 @@ $(document).ready(function() {
                 length_click = 0
                 removestate("temperature")
                 temp_click = 0
-                myFunction(vol_units, colour_tags[2], colour_tags[3])
+                myFunction(vol_units)
             }
 
         }
@@ -112,7 +109,7 @@ removestate = (parameter) => {
     $(dead3).removeClass(active3)
 }
 
-function myFunction(inptuArray, backgroundcol, textcol) {
+function myFunction(inptuArray) {
     document.getElementById("units1").innerHTML = "";
     document.getElementById("units2").innerHTML = "";
     var x = document.getElementById("units1");
@@ -127,9 +124,4 @@ function myFunction(inptuArray, backgroundcol, textcol) {
         option.text = inptuArray[i];
         x.add(option);
     }
-    $("select option:checked").css({
-        "background": backgroundcol,
-        "background-color": backgroundcol,
-        "color": textcol
-    })
 }

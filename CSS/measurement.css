@@ -268,3 +268,9 @@ select {
     border-radius: 3px;
     padding: 10px;
 }
+
+select option:checked {
+    background: #ebd3f8;
+    background-color: #ebd3f8;
+    color: #ab47e1;
+}
