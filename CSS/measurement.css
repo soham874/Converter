@@ -90,14 +90,14 @@
     height: 57px;
     opacity: 1;
     transition: all 0.6s;
-    background: transparent url('./assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/scale\ \(1\).svg') 0% 0% no-repeat padding-box;
 }
 
 .temperature_image {
     width: 30px;
     height: 57px;
     opacity: 1;
-    background: transparent url('./assets/hot\ \(1\).svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/hot\ \(1\).svg') 0% 0% no-repeat padding-box;
     transition: all 0.6s;
 }
 
@@ -105,7 +105,7 @@
     width: 50px;
     height: 57px;
     opacity: 1;
-    background: transparent url('./assets/beaker\ \(1\).svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/beaker\ \(1\).svg') 0% 0% no-repeat padding-box;
     transition: all 0.6s;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .temperature_image_active {
-    background: transparent url('./assets/hot.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/hot.svg') 0% 0% no-repeat padding-box;
 }
 
 
@@ -161,7 +161,7 @@
 }
 
 .volume_image_active {
-    background: transparent url('./assets/beaker.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/beaker.svg') 0% 0% no-repeat padding-box;
 }
 
 
@@ -181,7 +181,7 @@
 }
 
 .length_image_active {
-    background: transparent url('./assets/scale.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/scale.svg') 0% 0% no-repeat padding-box;
 }
 
 
