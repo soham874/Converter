@@ -234,20 +234,22 @@ input::-webkit-inner-spin-button {
 }
 
 .choosefrom_box {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    height: 50px;
-    width: 100%;
     border-radius: 3px;
     background-color: white;
 }
 
 .triangle {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #919090;
+    position: absolute;
+    top: 45%;
+    right: 1%;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #919090;
     background: #919090 0% 0% no-repeat padding-box;
     transition: transform 0.5s linear;
     opacity: 1;
@@ -255,4 +257,11 @@ input::-webkit-inner-spin-button {
 
 .rotation {
     transform: rotate(180deg);
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    transition: all 0.6s;
+    font: normal normal normal 15px/19px Montserrat;
 }

@@ -2,6 +2,10 @@ let temp_click = 0
 let length_click = 0
 let volume_click = 0
 
+let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micrometer", "Mile", "Foot", "Inch"]
+let temp_units = ["Farenheit", "Kelvin", "Celcius"]
+let vol_units = ["Liters", "Millileters", "Gallons"]
+
 $(document).ready(function() {
 
     $(".temperature_rectangle").on(
@@ -17,6 +21,7 @@ $(document).ready(function() {
                 volume_click = 0
                 removestate("length")
                 length_click = 0
+                myFunction(temp_units)
             }
 
         }
@@ -34,6 +39,7 @@ $(document).ready(function() {
                 volume_click = 0
                 removestate("temperature")
                 temp_click = 0
+                myFunction(length_units)
             }
 
         }
@@ -51,6 +57,7 @@ $(document).ready(function() {
                 length_click = 0
                 removestate("temperature")
                 temp_click = 0
+                myFunction(vol_units)
             }
 
         }
@@ -60,7 +67,6 @@ $(document).ready(function() {
         'click',
         function() {
             $("#convert_from").toggleClass("rotation")
-            $("#convert_from_menu").css("display", "flex")
         }
     )
 
@@ -68,7 +74,6 @@ $(document).ready(function() {
         'click',
         function() {
             $("#convert_to").toggleClass("rotation")
-            $("#convert_to_menu").css("display", "flex")
         }
     )
 
@@ -98,4 +103,21 @@ removestate = (parameter) => {
     $(dead1).removeClass(active1)
     $(dead2).removeClass(active2)
     $(dead3).removeClass(active3)
+}
+
+function myFunction(inptuArray) {
+    document.getElementById("units1").innerHTML = "";
+    document.getElementById("units2").innerHTML = "";
+    var x = document.getElementById("units1");
+    for (let i = 0; i < inptuArray.length; i++) {
+        var option = document.createElement("option");
+        option.text = inptuArray[i];
+        x.add(option);
+    }
+    var x = document.getElementById("units2");
+    for (let i = 0; i < inptuArray.length; i++) {
+        var option = document.createElement("option");
+        option.text = inptuArray[i];
+        x.add(option);
+    }
 }
