@@ -56,10 +56,17 @@ $(document).ready(function() {
         }
     )
 
-    $(".triangle").on(
+    $("#convert_from").on(
         'click',
         function() {
-            $(".triangle").toggleClass("rotation")
+            $("#convert_from").toggleClass("rotation")
+        }
+    )
+
+    $("#convert_to").on(
+        'click',
+        function() {
+            $("#convert_to").toggleClass("rotation")
         }
     )
 });

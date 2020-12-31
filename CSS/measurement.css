@@ -248,7 +248,7 @@ input::-webkit-inner-spin-button {
     border-right: 5px solid transparent;
     border-top: 5px solid #919090;
     background: #919090 0% 0% no-repeat padding-box;
-    transition: transform 1s linear;
+    transition: transform 0.5s linear;
     opacity: 1;
 }
 
