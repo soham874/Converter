@@ -60,6 +60,7 @@ $(document).ready(function() {
         'click',
         function() {
             $("#convert_from").toggleClass("rotation")
+            $("#convert_from_menu").css("display", "flex")
         }
     )
 
@@ -67,8 +68,10 @@ $(document).ready(function() {
         'click',
         function() {
             $("#convert_to").toggleClass("rotation")
+            $("#convert_to_menu").css("display", "flex")
         }
     )
+
 });
 
 //toggles state of buttons

@@ -213,6 +213,7 @@
     justify-content: space-between;
     width: 40%;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 input[type=number] {
@@ -237,7 +238,7 @@ input::-webkit-inner-spin-button {
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 50px;
+    height: 50px;
     width: 100%;
     border-radius: 3px;
     background-color: white;
