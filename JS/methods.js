@@ -55,6 +55,13 @@ $(document).ready(function() {
 
         }
     )
+
+    $(".triangle").on(
+        'click',
+        function() {
+            $(".triangle").toggleClass("rotation")
+        }
+    )
 });
 
 //toggles state of buttons

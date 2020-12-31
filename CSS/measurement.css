@@ -218,7 +218,7 @@
 input[type=number] {
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 280px;
     height: 40px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -234,11 +234,24 @@ input::-webkit-inner-spin-button {
 
 .choosefrom_box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
     min-height: 50px;
     width: 100%;
     border-radius: 3px;
     background-color: white;
+}
+
+.triangle {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #919090;
+    background: #919090 0% 0% no-repeat padding-box;
+    transition: transform 1s linear;
+    opacity: 1;
+}
+
+.rotation {
+    transform: rotate(180deg);
 }
