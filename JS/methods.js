@@ -25,14 +25,8 @@ $(document).ready(function() {
                 togglestate("temperature")
 
             if (event.type == "click") {
+                changeType("volume", "length", temp_units, temp_conv)
                 temp_click = 1
-                removestate("volume")
-                volume_click = 0
-                removestate("length")
-                length_click = 0
-                myFunction(temp_units)
-                currentArrayNames = temp_units
-                currentArrayUnits = temp_conv
             }
 
         }
@@ -45,14 +39,8 @@ $(document).ready(function() {
                 togglestate("length")
 
             if (event.type == "click") {
+                changeType("volume", "temperature", length_units, length_conv)
                 length_click = 1
-                removestate("volume")
-                volume_click = 0
-                removestate("temperature")
-                temp_click = 0
-                myFunction(length_units)
-                currentArrayNames = length_units
-                currentArrayUnits = length_conv
             }
         }
     )
@@ -64,30 +52,10 @@ $(document).ready(function() {
                 togglestate("volume")
 
             if (event.type == "click") {
+                changeType("length", "temperature", vol_units, vol_conv)
                 volume_click = 1
-                removestate("length")
-                length_click = 0
-                removestate("temperature")
-                temp_click = 0
-                myFunction(vol_units)
-                currentArrayNames = vol_units
-                currentArrayUnits = vol_conv
             }
 
-        }
-    )
-
-    $("#convert_from").on(
-        'click',
-        function() {
-            $("#convert_from").toggleClass("rotation")
-        }
-    )
-
-    $("#convert_to").on(
-        'click',
-        function() {
-            $("#convert_to").toggleClass("rotation")
         }
     )
 
@@ -119,7 +87,7 @@ removestate = (parameter) => {
     $(dead3).removeClass(active3)
 }
 
-function myFunction(inptuArray) {
+function updateOptions(inptuArray) {
     document.getElementById("units1").innerHTML = "";
     document.getElementById("units2").innerHTML = "";
     var x = document.getElementById("units1");
@@ -177,4 +145,16 @@ convertTemprature = (input, convertFromIndex, convertToIndex) => {
             break;
     }
     return output
+}
+
+changeType = (close1, close2, currentArrayU, currentArrayN) => {
+    temp_click = 0
+    volume_click = 0
+    length_click = 0
+    removestate(close1)
+    removestate(close2)
+    updateOptions(currentArrayU)
+    currentArrayNames = currentArrayU
+    currentArrayUnits = currentArrayN
+    document.getElementById("inputValue").value = ""
 }
