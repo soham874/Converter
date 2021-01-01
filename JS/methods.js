@@ -138,13 +138,12 @@ function myFunction(inptuArray) {
     }
 }
 
-convertValue = () => {
+convertValue = input => {
     var e = document.getElementById("units1");
     var convertFromIndex = currentArrayNames.findIndex(val => val === e.value);
     var e = document.getElementById("units2");
     var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
 
-    let input = document.getElementById("inputValue").value
     let res = input * currentArrayUnits[convertToIndex] / currentArrayUnits[convertFromIndex]
 
     if (currentArrayNames == temp_units)
