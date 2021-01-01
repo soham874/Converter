@@ -6,10 +6,10 @@ let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micromet
 let length_conv = [1, 1000, 100000, 1000000, 100000000, 0.621371, 3280.838879986877, 39370.1]
 
 let temp_units = ["Farenheit", "Kelvin", "Celcius"]
-let temp_conv = []
+let temp_conv = [1, 1, 1]
 
 let vol_units = ["Litres", "Mililiters", "Gallons"]
-let vol_conv = []
+let vol_conv = [1, 1000, 0.264172]
 
 var currentArrayNames
 var currentArrayUnits
@@ -144,4 +144,36 @@ convertValue = () => {
     var e = document.getElementById("units2");
     var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
 
+    let input = document.getElementById("inputValue").value
+    let res = input * currentArrayUnits[convertToIndex] / currentArrayUnits[convertFromIndex]
+
+    if (currentArrayNames == temp_units)
+        res = convertTemprature(input, convertFromIndex, convertToIndex)
+
+    document.getElementById("outputValue").value = res;
+}
+
+convertTemprature = (input, convertFromIndex, convertToIndex) => {
+    let output
+    switch (convertFromIndex | convertToIndex) {
+        case 0 | 1:
+            output = (input - 32) * 5 / 9 + 273.15
+            break;
+        case 0 | 2:
+            output = (input - 32) * 5 / 9
+            break;
+        case 1 | 0:
+            output = (input - 273.15) * 9 / 5 + 32
+            break;
+        case 1 | 2:
+            output = input - 273.15
+            break;
+        case 2 | 0:
+            output = 5 * input / 9 + 32
+            break;
+        case 2 | 1:
+            output = input + 273.15
+            break;
+    }
+    return output
 }
