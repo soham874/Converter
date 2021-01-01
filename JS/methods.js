@@ -116,7 +116,7 @@ convertValue = input => {
 
     let res = input * currentArrayUnits[convertToIndex] / currentArrayUnits[convertFromIndex]
 
-    if (currentArrayNames == temp_units)
+    if (currentArrayNames == temp_units && convertToIndex != convertFromIndex)
         res = convertTemprature(input, convertFromIndex, convertToIndex)
 
     document.getElementById("outputValue").value = res;
@@ -157,4 +157,5 @@ changeType = (close1, close2, currentArrayU, currentArrayN) => {
     currentArrayNames = currentArrayU
     currentArrayUnits = currentArrayN
     document.getElementById("inputValue").value = ""
+    document.getElementById("outputValue").value = ""
 }
