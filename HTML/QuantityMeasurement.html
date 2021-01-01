@@ -23,6 +23,7 @@
     <div class="welcome">
         <div class="welcome_text">Welcome to Quantity Measurement</div>
     </div>
+
     <div class="main_body">
 
         <div class="choose_type"><b>choose type</b></div>
@@ -52,11 +53,8 @@
                 <input type="number" id="inputValue" placeholder="0" oninput="convertValue()" onchange="convertValue()">
                 <div class="choosefrom_box">
                     <select id="units1" oninput="convertValue()" onchange="convertValue()"></select>
-                    <span class="triangle" id="convert_from"></span>
                 </div>
             </form>
-            <div class="custom-select">
-            </div>
         </div>
 
         <div class="to_box">
@@ -65,7 +63,6 @@
                 <input type="number" id="outputValue" placeholder="0" disabled>
                 <div class="choosefrom_box">
                     <select id="units2" oninput="convertValue()" onchange="convertValue()"></select>
-                    <div class="triangle" id="convert_to"></div>
                 </div>
             </form>
         </div>

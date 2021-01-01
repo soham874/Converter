@@ -27,6 +27,7 @@
 
 .welcome {
     display: flex;
+    left: 0px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -219,7 +220,6 @@
 input[type=number] {
     display: flex;
     flex-wrap: wrap;
-    width: 280px;
     height: 40px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -241,23 +241,6 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
     border-radius: 3px;
     background-color: white;
-}
-
-.triangle {
-    position: absolute;
-    top: 45%;
-    right: 1%;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #919090;
-    background: #919090 0% 0% no-repeat padding-box;
-    transition: transform 0.5s linear;
-    opacity: 1;
-    pointer-events: none;
-}
-
-.rotation {
-    transform: rotate(180deg);
 }
 
 select {

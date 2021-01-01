@@ -11,10 +11,10 @@ let temp_conv = [1, 1, 1]
 let vol_units = ["Litres", "Mililiters", "Gallons"]
 let vol_conv = [1, 1000, 0.264172]
 
-var currentArrayNames
-var currentArrayUnits
+let currentArrayNames
+let currentArrayUnits
 
-
+//driver for hover and select conversion type
 $(document).ready(function() {
 
     $(".temperature_rectangle").on(
@@ -87,6 +87,7 @@ removestate = (parameter) => {
     $(dead3).removeClass(active3)
 }
 
+//dynamically updates drop down menu options
 function updateOptions(inptuArray) {
     document.getElementById("units1").innerHTML = "";
     document.getElementById("units2").innerHTML = "";
@@ -106,6 +107,7 @@ function updateOptions(inptuArray) {
     }
 }
 
+//dynamic converter
 convertValue = input => {
 
     var input = document.getElementById("inputValue").value;
@@ -122,6 +124,7 @@ convertValue = input => {
     document.getElementById("outputValue").value = res;
 }
 
+//function for temperature convertion
 convertTemprature = (input, convertFromIndex, convertToIndex) => {
     let output
     switch (convertFromIndex | convertToIndex) {
@@ -147,6 +150,7 @@ convertTemprature = (input, convertFromIndex, convertToIndex) => {
     return output
 }
 
+//update page accordingly when conversion type is selecetd
 changeType = (close1, close2, currentArrayU, currentArrayN) => {
     temp_click = 0
     volume_click = 0
