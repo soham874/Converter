@@ -24,53 +24,57 @@
         <div class="welcome_text">Welcome to Quantity Measurement</div>
     </div>
 
-    <div class="main_body">
+    <div class="operations">
+        <div class="main_body">
 
-        <div class="choose_type"><b>choose type</b></div>
+            <div class="choose_type"><b>choose type</b></div>
 
-        <div class="options">
-            <button class="length_rectangle">
-                <div class="length_image"></div>
-                <div class="length">Length</div>
-            </button>
-            <button class="temperature_rectangle">
-                <div class="temperature_image"></div>
-                <div class="temperature">Temperature</div>
-            </button>
-            <button class="volume_rectangle">
-                <div class="volume_image"></div>
-                <div class="volume">Volume</div>
-            </button>
-        </div>
-
-    </div>
-
-    <div class="dialogue_boxes">
-
-        <div class="from_box">
-            <div class="info">FROM</div>
-            <form>
-                <input type="number" id="inputValue" placeholder="0">
-                <div class="choosefrom_box">
-                    <select id="units1"></select>
-                    <span class="triangle" id="convert_from"></span>
-                </div>
-            </form>
-            <div class="custom-select">
+            <div class="options">
+                <button class="length_rectangle">
+                    <div class="length_image"></div>
+                    <div class="length">Length</div>
+                </button>
+                <button class="temperature_rectangle">
+                    <div class="temperature_image"></div>
+                    <div class="temperature">Temperature</div>
+                </button>
+                <button class="volume_rectangle">
+                    <div class="volume_image"></div>
+                    <div class="volume">Volume</div>
+                </button>
             </div>
+
         </div>
 
-        <div class="to_box">
-            <div class="info">TO</div>
-            <form>
-                <input type="number" id="outputValue" placeholder="0" disabled>
-                <div class="choosefrom_box">
-                    <select id="units2"></select>
-                    <div class="triangle" id="convert_to"></div>
+        <div class="dialogue_boxes">
+
+            <div class="from_box">
+                <div class="info">FROM</div>
+                <form>
+                    <input type="number" id="inputValue" placeholder="0">
+                    <div class="choosefrom_box">
+                        <select id="units1"></select>
+                        <span class="triangle" id="convert_from"></span>
+                    </div>
+                </form>
+                <div class="custom-select">
                 </div>
-            </form>
+            </div>
+
+            <div class="to_box">
+                <div class="info">TO</div>
+                <form>
+                    <input type="number" id="outputValue" placeholder="0" disabled>
+                    <div class="choosefrom_box">
+                        <select id="units2"></select>
+                        <div class="triangle" id="convert_to"></div>
+                    </div>
+                </form>
+            </div>
+
         </div>
 
+        <button class="calculate_button" onclick="convertValue()">Convert!</button>
     </div>
 
 </body>

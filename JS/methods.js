@@ -122,6 +122,7 @@ function myFunction(inptuArray) {
     for (let i = 0; i < inptuArray.length; i++) {
         var option = document.createElement("option");
         option.text = inptuArray[i];
+        option.id = i;
         x.add(option);
     }
 }
