@@ -139,6 +139,8 @@ function myFunction(inptuArray) {
 }
 
 convertValue = input => {
+
+    var input = document.getElementById("inputValue").value;
     var e = document.getElementById("units1");
     var convertFromIndex = currentArrayNames.findIndex(val => val === e.value);
     var e = document.getElementById("units2");

@@ -49,9 +49,9 @@
         <div class="from_box">
             <div class="info">FROM</div>
             <form>
-                <input type="number" id="inputValue" placeholder="0" oninput="convertValue(this.value)" onchange="convertValue(this.value)">
+                <input type="number" id="inputValue" placeholder="0" oninput="convertValue()" onchange="convertValue()">
                 <div class="choosefrom_box">
-                    <select id="units1"></select>
+                    <select id="units1" oninput="convertValue()" onchange="convertValue()"></select>
                     <span class="triangle" id="convert_from"></span>
                 </div>
             </form>
@@ -64,7 +64,7 @@
             <form>
                 <input type="number" id="outputValue" placeholder="0" disabled>
                 <div class="choosefrom_box">
-                    <select id="units2"></select>
+                    <select id="units2" oninput="convertValue()" onchange="convertValue()"></select>
                     <div class="triangle" id="convert_to"></div>
                 </div>
             </form>
