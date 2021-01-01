@@ -6,8 +6,13 @@ let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micromet
 let length_conv = [1, 1000, 100000, 1000000, 100000000, 0.621371, 3280.838879986877, 39370.1]
 
 let temp_units = ["Farenheit", "Kelvin", "Celcius"]
+let temp_conv = []
 
 let vol_units = ["Litres", "Mililiters", "Gallons"]
+let vol_conv = []
+
+var currentArrayNames
+var currentArrayUnits
 
 
 $(document).ready(function() {
@@ -26,6 +31,8 @@ $(document).ready(function() {
                 removestate("length")
                 length_click = 0
                 myFunction(temp_units)
+                currentArrayNames = temp_units
+                currentArrayUnits = temp_conv
             }
 
         }
@@ -44,8 +51,9 @@ $(document).ready(function() {
                 removestate("temperature")
                 temp_click = 0
                 myFunction(length_units)
+                currentArrayNames = length_units
+                currentArrayUnits = length_conv
             }
-
         }
     )
 
@@ -62,6 +70,8 @@ $(document).ready(function() {
                 removestate("temperature")
                 temp_click = 0
                 myFunction(vol_units)
+                currentArrayNames = vol_units
+                currentArrayUnits = vol_conv
             }
 
         }
@@ -116,6 +126,7 @@ function myFunction(inptuArray) {
     for (let i = 0; i < inptuArray.length; i++) {
         var option = document.createElement("option");
         option.text = inptuArray[i];
+        option.id = i;
         x.add(option);
     }
     var x = document.getElementById("units2");
@@ -125,4 +136,12 @@ function myFunction(inptuArray) {
         option.id = i;
         x.add(option);
     }
+}
+
+convertValue = () => {
+    var e = document.getElementById("units1");
+    var convertFromIndex = currentArrayNames.findIndex(val => val === e.value);
+    var e = document.getElementById("units2");
+    var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
+
 }
