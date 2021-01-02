@@ -201,6 +201,7 @@
 
 .from_box,
 .to_box {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -209,15 +210,14 @@
 
 .dialogue_boxes {
     padding-left: 30%;
-    padding-top: 30px;
     display: flex;
     justify-content: space-between;
     width: 40%;
     flex-wrap: wrap;
-    align-items: flex-start;
 }
 
 input[type=number] {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     height: 40px;
@@ -256,4 +256,9 @@ select option:checked {
     background: #ebd3f8;
     background-color: #ebd3f8;
     color: #ab47e1;
+}
+
+form {
+    width: 100%;
+    ;
 }
