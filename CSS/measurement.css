@@ -265,10 +265,29 @@ form {
 @media only screen and (max-width: 400px) {
     .from_box,
     .to_box {
-        width: 150px;
+        width: 100%;
     }
     #inputValue,
     #outputValue {
         width: 100%;
+    }
+    .main_body {
+        padding-left: 15%;
+        width: 70%;
+    }
+    .length_rectangle,
+    .temperature_rectangle,
+    .volume_rectangle {
+        width: 100%;
+    }
+    .dialogue_boxes {
+        width: 70%;
+        padding-left: 15%;
+    }
+    .welcome_text {
+        font: normal normal normal 15px/10px Montserrat;
+    }
+    .Quanment {
+        font: normal normal 600 15px/31px Poppins;
     }
 }
