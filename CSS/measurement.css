@@ -263,6 +263,10 @@ form {
 }
 
 @media only screen and (max-width: 400px) {
+    .from_box,
+    .to_box {
+        width: 150px;
+    }
     #inputValue,
     #outputValue {
         width: 100%;
