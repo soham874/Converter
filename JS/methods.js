@@ -175,6 +175,6 @@ addToHistory = () => {
     var e = document.getElementById("units2");
     var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
 
-    s += `|    ${input} ${currentArrayNames[convertFromIndex]} = ${res} ${currentArrayNames[convertToIndex]}     |`
+    s += `|    ${input} ${currentArrayNames[convertFromIndex]} = ${res.toFixed(3)} ${currentArrayNames[convertToIndex]}     |`
     document.getElementById("history_bar").innerHTML = s;
 }
