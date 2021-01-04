@@ -2,6 +2,7 @@ let temp_click = 0
 let length_click = 0
 let volume_click = 0
 let s = "Conversions this session => "
+let res
 
 let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micrometer", "Mile", "Foot", "Inch"]
 let length_conv = [1, 1000, 100000, 1000000, 100000000, 0.621371, 3280.838879986877, 39370.1]
@@ -118,7 +119,7 @@ convertValue = input => {
     var e = document.getElementById("units2");
     var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
 
-    let res = input * currentArrayUnits[convertToIndex] / currentArrayUnits[convertFromIndex]
+    res = input * currentArrayUnits[convertToIndex] / currentArrayUnits[convertFromIndex]
 
     if (currentArrayNames == temp_units && convertToIndex != convertFromIndex)
         res = convertTemprature(input, convertFromIndex, convertToIndex)
@@ -174,6 +175,6 @@ addToHistory = () => {
     var e = document.getElementById("units2");
     var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
 
-    s += `|    ${input} ${currentArrayNames[convertFromIndex]} to ${currentArrayNames[convertToIndex]}     |`
+    s += `|    ${input} ${currentArrayNames[convertFromIndex]} = ${res} ${currentArrayNames[convertToIndex]}     |`
     document.getElementById("history_bar").innerHTML = s;
 }
