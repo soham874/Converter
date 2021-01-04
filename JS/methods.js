@@ -127,24 +127,24 @@ convertValue = input => {
 //function for temperature convertion
 convertTemprature = (input, convertFromIndex, convertToIndex) => {
     let output
-    switch (convertFromIndex | convertToIndex) {
-        case 0 | 1:
-            output = (input - 32) * 5 / 9 + 273.15
+    switch (convertFromIndex) {
+        case 0:
+            if (convertToIndex == 1)
+                output = (input - 32) * 5 / 9 + 273.15
+            if (convertToIndex == 2)
+                output = (input - 32) * 5 / 9
             break;
-        case 0 | 2:
-            output = (input - 32) * 5 / 9
+        case 1:
+            if (convertToIndex == 0)
+                output = (input - 273.15) * 9 / 5 + 32
+            if (convertToIndex == 2)
+                output = input - 273.15
             break;
-        case 1 | 0:
-            output = (input - 273.15) * 9 / 5 + 32
-            break;
-        case 1 | 2:
-            output = input - 273.15
-            break;
-        case 2 | 0:
-            output = 5 * input / 9 + 32
-            break;
-        case 2 | 1:
-            output = input + 273.15
+        case 2:
+            if (convertToIndex == 0)
+                output = 5 * input / 9 + 32
+            if (convertToIndex == 1)
+                output = input + 273.15
             break;
     }
     return output
