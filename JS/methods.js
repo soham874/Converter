@@ -14,8 +14,13 @@ let vol_conv = [1, 1000, 0.264172]
 let currentArrayNames
 let currentArrayUnits
 
+
 //driver for hover and select conversion type
 $(document).ready(function() {
+
+    changeType("volume", "temperature", length_units, length_conv)
+    length_click = 1
+    togglestate("length")
 
     $(".temperature_rectangle").on(
         'mouseleave mouseenter click',
@@ -87,22 +92,13 @@ removestate = (parameter) => {
     $(dead3).removeClass(active3)
 }
 
-//dynamically updates drop down menu options
-function updateOptions(inptuArray) {
-    document.getElementById("units1").innerHTML = "";
-    document.getElementById("units2").innerHTML = "";
-    var x = document.getElementById("units1");
+//dynamically updates 'inputArray' drop down menu options to menu with id 'ID'
+updateOptions = (inptuArray, ID) => {
+    document.getElementById(ID).innerHTML = "";
+    var x = document.getElementById(ID);
     for (let i = 0; i < inptuArray.length; i++) {
         var option = document.createElement("option");
         option.text = inptuArray[i];
-        option.id = i;
-        x.add(option);
-    }
-    var x = document.getElementById("units2");
-    for (let i = 0; i < inptuArray.length; i++) {
-        var option = document.createElement("option");
-        option.text = inptuArray[i];
-        option.id = i;
         x.add(option);
     }
 }
@@ -128,23 +124,23 @@ convertValue = input => {
 convertTemprature = (input, convertFromIndex, convertToIndex) => {
     let output
     switch (convertFromIndex) {
-        case 0:
-            if (convertToIndex == 1)
+        case 0: //from farenheit
+            if (convertToIndex == 1) //to kelvin
                 output = (input - 32) * 5 / 9 + 273.15
-            if (convertToIndex == 2)
+            if (convertToIndex == 2) //to celcius
                 output = (input - 32) * 5 / 9
             break;
-        case 1:
-            if (convertToIndex == 0)
+        case 1: //from kelvin
+            if (convertToIndex == 0) //to farenheit
                 output = (input - 273.15) * 9 / 5 + 32
-            if (convertToIndex == 2)
+            if (convertToIndex == 2) //to celcius
                 output = input - 273.15
             break;
-        case 2:
-            if (convertToIndex == 0)
+        case 2: //from celcius
+            if (convertToIndex == 0) //to farenheit
                 output = 5 * input / 9 + 32
-            if (convertToIndex == 1)
-                output = input + 273.15
+            if (convertToIndex == 1) //to kelvin
+                output = parseFloat(input) + 273.15
             break;
     }
     return output
@@ -157,7 +153,8 @@ changeType = (close1, close2, currentArrayU, currentArrayN) => {
     length_click = 0
     removestate(close1)
     removestate(close2)
-    updateOptions(currentArrayU)
+    updateOptions(currentArrayU, "units1")
+    updateOptions(currentArrayU, "units2")
     currentArrayNames = currentArrayU
     currentArrayUnits = currentArrayN
     document.getElementById("inputValue").value = ""
