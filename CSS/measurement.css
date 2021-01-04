@@ -201,7 +201,8 @@ body {
     color: #000000;
     align-items: center;
     text-transform: uppercase;
-    opacity: 0.62;
+    font-weight: bold;
+    opacity: 1;
 }
 
 .from_box,

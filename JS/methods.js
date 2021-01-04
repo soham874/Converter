@@ -140,7 +140,7 @@ convertTemprature = (input, convertFromIndex, convertToIndex) => {
             if (convertToIndex == 0) //to farenheit
                 output = 5 * input / 9 + 32
             if (convertToIndex == 1) //to kelvin
-                output = parseFloat(input) + 273.15
+                output = (input * 1) + (273.15 * 1)
             break;
     }
     return output
