@@ -25,6 +25,8 @@
         <div class="welcome_text">Welcome to Quantity Measurement</div>
     </div>
 
+    <marquee id="history_bar" scrollamount="11" style="background-color: lightsteelblue; height: 20px;"></marquee>
+
     <div class="main_body">
 
         <div class="choose_type"><b>choose type</b></div>
@@ -51,7 +53,7 @@
         <div class="from_box">
             <div class="info">FROM</div>
             <form>
-                <input type="number" id="inputValue" placeholder="0" oninput="convertValue()" onchange="convertValue()">
+                <input type="number" id="inputValue" placeholder="0" oninput="convertValue()" onchange="convertValue();addToHistory()">
                 <div class="choosefrom_box">
                     <select id="units1" oninput="convertValue()" onchange="convertValue()"></select>
                 </div>

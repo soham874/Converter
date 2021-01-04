@@ -1,6 +1,7 @@
 let temp_click = 0
 let length_click = 0
 let volume_click = 0
+let s = "Conversions this session => "
 
 let length_units = ["Kilometer", "Meter", "Centimeters", "Millimetre", "Micrometer", "Mile", "Foot", "Inch"]
 let length_conv = [1, 1000, 100000, 1000000, 100000000, 0.621371, 3280.838879986877, 39370.1]
@@ -14,6 +15,10 @@ let vol_conv = [1, 1000, 0.264172]
 let currentArrayNames
 let currentArrayUnits
 
+//prevents submitting the form by pressing enter
+$(function() {
+    $("form").submit(function() { return false; });
+});
 
 //driver for hover and select conversion type
 $(document).ready(function() {
@@ -21,6 +26,7 @@ $(document).ready(function() {
     changeType("volume", "temperature", length_units, length_conv)
     length_click = 1
     togglestate("length")
+    document.getElementById("history_bar").innerHTML = s;
 
     $(".temperature_rectangle").on(
         'mouseleave mouseenter click',
@@ -159,4 +165,15 @@ changeType = (close1, close2, currentArrayU, currentArrayN) => {
     currentArrayUnits = currentArrayN
     document.getElementById("inputValue").value = ""
     document.getElementById("outputValue").value = ""
+}
+
+addToHistory = () => {
+    var input = document.getElementById("inputValue").value;
+    var e = document.getElementById("units1");
+    var convertFromIndex = currentArrayNames.findIndex(val => val === e.value);
+    var e = document.getElementById("units2");
+    var convertToIndex = currentArrayNames.findIndex(val => val === e.value);
+
+    s += `|    ${input} ${currentArrayNames[convertFromIndex]} to ${currentArrayNames[convertToIndex]}     |`
+    document.getElementById("history_bar").innerHTML = s;
 }
