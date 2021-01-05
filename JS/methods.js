@@ -168,6 +168,7 @@ changeType = (close1, close2, currentArrayU, currentArrayN) => {
     document.getElementById("outputValue").value = ""
 }
 
+//adds conversion history
 addToHistory = () => {
     var input = document.getElementById("inputValue").value;
     var e = document.getElementById("units1");
